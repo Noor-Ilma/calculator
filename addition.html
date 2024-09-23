@@ -1,0 +1,33 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Addition Calculator</title>
+</head>
+<body>
+    <h1>Addition Calculator</h1>
+    <form id="additionForm">
+        <label for="num1">First Number:</label>
+        <input type="number" id="num1" required>
+        <br>
+        <label for="num2">Second Number:</label>
+        <input type="number" id="num2" required>
+        <br>
+        <button type="submit">Add</button>
+    </form>
+    <h2 id="result"></h2>
+
+    <script>
+        document.getElementById('additionForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const num1 = parseFloat(document.getElementById('num1').value);
+            const num2 = parseFloat(document.getElementById('num2').value);
+            const sum = num1 + num2;
+            document.getElementById('result').innerText = 'Result: ' + sum;
+        });
+    </script>
+</body>
+</html>
